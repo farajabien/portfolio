@@ -43,6 +43,25 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
               <div className="flex-1">{children}</div>
+              <footer>
+              <div className="container flex flex-col items-center justify-center space-y-4 py-8 text-center text-sm text-muted-foreground">
+                <div>
+                  <span className="font-bold">{siteConfig.name}</span> &copy;{" "}
+                  {new Date().getFullYear()}
+                </div>
+                <div>
+                  <span className="font-bold">Made with ❤️</span> by{" "}
+                  <a
+                    href="https://twitter.com/farajabien"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline"
+                  >
+                    Faraja
+                  </a>
+                </div>
+              </div>
+            </footer>
             </div>
           </ThemeProvider>
         </body>
