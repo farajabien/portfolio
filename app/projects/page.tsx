@@ -1,6 +1,16 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Terminal, Waves } from "lucide-react"
-import { FaInfoCircle } from "react-icons/fa"
+import {
+  FaCss3Alt,
+  FaHtml5,
+  FaInfoCircle,
+  FaNodeJs,
+  FaPython,
+  FaReact,
+} from "react-icons/fa"
+import { IoLogoJavascript } from "react-icons/io"
+import { SiTailwindcss } from "react-icons/si"
 
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Button } from "@/components/ui/button"
@@ -14,14 +24,73 @@ import {
 } from "@/components/ui/card"
 
 const projects: any[] = [
-  // {
-  //   title: "ClassCritique",
-  //   description:
-  //     "Developed and implemented a user-friendly feature for students to rate and review their lecturers, increasing transparency and accountability in academia.",
-  //   image: "/classcritique.jpg",
-  //   demoLink: "https://class-critique-client-2.vercel.app/",
-  //   codeLink: "https://github.com/farajabien/class-critique-client-2",
-  // },
+  {
+    title: "ClassCritique",
+    description:
+      "In this project, I developed and implemented a user-friendly feature that allows students to rate and review their lecturers. By increasing transparency and accountability in academia, ClassCritique has contributed to creating a more informed and fair learning environment.",
+    tech: (
+      <div className="mt-6 flex flex-row space-x-4">
+        <FaReact size={32} className="text-blue-500" />
+        <FaNodeJs size={32} className="text-green-500" />
+        <IoLogoJavascript size={32} className="text-yellow-500" />
+        <FaHtml5 size={32} className="text-orange-500" />
+        <FaCss3Alt size={32} className="text-purple-500" />
+        <SiTailwindcss size={32} className="text-blue-400" />
+      </div>
+    ),
+    image: "/classcritique.png",
+    demoLink: "https://class-critique-client-2.vercel.app/",
+    codeLink: "https://github.com/farajabien/class-critique-client-2",
+  },
+  {
+    title: "My Portfolio",
+    description:
+      "In the 'My Portfolio' project, I have developed and implemented a user-friendly portfolio website to showcase my work, skills, and achievements. The portfolio features a clean and modern design, highlighting my projects, experiences, and contact information.",
+    tech: (
+      <div className="mt-6 flex flex-row space-x-4">
+        <FaReact size={32} className="text-blue-500" />
+        <IoLogoJavascript size={32} className="text-yellow-500" />
+        <FaHtml5 size={32} className="text-orange-500" />
+        <SiTailwindcss size={32} className="text-blue-400" />
+      </div>
+    ),
+    image: "/portfolio.png",
+    demoLink: "https://farajabien.vercel.app/",
+    codeLink: "https://github.com/farajabien/portfolio",
+  },
+  {
+    title: "KingRafiki",
+    description:
+      "KingRafiki is an ecommerce store built with React.js and Django. It features integration with Stripe for secure payment processing and utilizes PostgreSQL for data storage. The website was previously hosted on Heroku, but due to changes in their pricing model, it is no longer available on the free tier.",
+    tech: (
+      <div className="mt-6 flex flex-row space-x-4">
+        <FaReact size={32} className="text-blue-500" />
+        <IoLogoJavascript size={32} className="text-yellow-500" />
+        <FaHtml5 size={32} className="text-orange-500" />
+        <SiTailwindcss size={32} className="text-blue-400" />
+        <FaPython size={32} className="text-blue-500" />
+      </div>
+    ),
+    // image: "",
+    demoLink: "",
+    codeLink: "https://github.com/farajabien/kingrafiki",
+  },
+  {
+    title: "Diego's Blog",
+    description:
+      "Diego's Blog is a blog website built with React.js. It features a clean and modern design, providing a visually pleasing reading experience for visitors. The blog showcases a collection of articles and posts covering various topics such as technology, lifestyle, and personal experiences. With user-friendly navigation and engaging content, Diego's Blog aims to inform and inspire readers with valuable insights and perspectives.",
+    tech: (
+      <div className="mt-6 flex flex-row space-x-4">
+        <FaReact size={32} className="text-blue-500" />
+        <IoLogoJavascript size={32} className="text-yellow-500" />
+        <FaHtml5 size={32} className="text-orange-500" />
+        <SiTailwindcss size={32} className="text-blue-400" />
+      </div>
+    ),
+    image: "/diegoblog.png",
+    demoLink: "https://farajabien.github.io/my-blog-react/",
+    codeLink: "https://github.com/farajabien/my-blog-react/tree/master",
+  },
 ]
 
 export default function ProjectsPage() {
@@ -51,27 +120,44 @@ export default function ProjectsPage() {
             <Card key={project.title}>
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={500}
+                    height={300}
+                  />
+                ) : (
+                  <div className="h-48 w-full animate-pulse bg-gray-100 dark:bg-gray-800 "></div>
+                )}
               </CardHeader>
               <CardContent>
                 <CardDescription>{project.description}</CardDescription>
+                {project.tech}
               </CardContent>
               <CardFooter>
-                <Link
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Button
+                  variant="outline"
+                  className="mr-2"
+                  disabled={project.demoLink === ""}
                 >
-                  <Button variant="outline" className="mr-2">
+                  <Link
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Demo
-                  </Button>
-                </Link>
-                <Link
-                  href={project.codeLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button variant="outline">Code</Button>
-                </Link>
+                  </Link>
+                </Button>
+                <Button variant="outline" disabled={project.codeLink === ""}>
+                  <Link
+                    href={project.codeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Code
+                  </Link>
+                </Button>
               </CardFooter>
             </Card>
           ))}
