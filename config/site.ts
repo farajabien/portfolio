@@ -1,13 +1,17 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Dear Boy",
+  name: "My Portfolio",
   description:
     "My starter nextjs tailwind with shadcn ui",
   mainNav: [
     {
-      title: "Home",
-      href: "/",
+      title: "Projects",
+      href: "projects",
+    },
+    {
+      title: "Contact",
+      href: "contact",
     },
   ],
   links: {
