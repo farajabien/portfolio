@@ -11,10 +11,10 @@ import {
   MenubarContent,
   MenubarItem,
   MenubarMenu,
-  MenubarSeparator,
-  MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar"
+
+import { Icons } from "./icons"
 
 interface MainNavProps {
   items?: NavItem[]
@@ -61,6 +61,7 @@ export function MainNav({ items }: MainNavProps) {
         </Menubar>
 
         <Link href="/" className=" items-center space-x-2 md:flex">
+          <Icons.logo className="h-6 w-6" />
           <span className="font-bold sm:inline-block">{siteConfig.name}</span>
         </Link>
         {items?.map(
