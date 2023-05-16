@@ -2,6 +2,7 @@ import Link from "next/link"
 import {
   FaCss3Alt,
   FaFilePdf,
+  FaGit,
   FaGithub,
   FaHtml5,
   FaNodeJs,
@@ -22,7 +23,7 @@ export default function IndexPage() {
         <h1 className="text-4xl font-extrabold sm:text-5xl md:text-6xl">
           Hi, I&apos;m Bienvenu!
         </h1>
-        <p className="mt-6 max-w-3xl text-xl text-gray-500">
+        <p className="mt-6 max-w-3xl text-xl text-gray-500 dark:text-gray-300">
           I&apos;m a full stack web developer with experience in both front-end
           and back-end development. I specialize in developing web applications
           using modern web technologies such as ReactJS, NodeJS, and NextJS.
@@ -34,6 +35,10 @@ export default function IndexPage() {
           <FaHtml5 size={32} className="text-orange-500" />
           <FaCss3Alt size={32} className="text-purple-500" />
           <SiTailwindcss size={32} className="text-blue-400" />
+          <FaGit
+            size={32}
+            className="text-gray-500  transition duration-300  hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-200"
+          />
         </div>
 
         <div className="mt-12">
@@ -50,7 +55,7 @@ export default function IndexPage() {
 
         <div className="mt-12">
           <h2 className="text-2xl font-bold">Resume</h2>
-          <p className="mt-4 text-gray-500">
+          <p className="mt-4 text-gray-500 dark:text-gray-200">
             Want to know more about my skills, experience, and qualifications?
             Check out my resume!
           </p>

@@ -125,10 +125,11 @@ export default function ProjectsPage() {
                     src={project.image}
                     alt={project.title}
                     width={500}
-                    height={300}
+                    height={200}
+                    className="max-h-48"
                   />
                 ) : (
-                  <div className="h-48 w-full animate-pulse bg-gray-100 dark:bg-gray-800 "></div>
+                  <div className="h-48 w-full animate-pulse bg-gray-100 dark:bg-gray-800"></div>
                 )}
               </CardHeader>
               <CardContent>
