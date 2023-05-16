@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Mail } from "lucide-react"
-import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa"
+import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { FiPhone } from "react-icons/fi"
 
 import { Button } from "@/components/ui/button"
@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 export default function ContactPage() {
   return (
     <main className="container grid items-center">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 items-center">
+      <div className="mx-auto max-w-6xl items-center px-4 py-12 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-extrabold sm:text-5xl md:text-6xl">
           Contact Me
         </h1>
@@ -40,7 +40,7 @@ export default function ContactPage() {
             </Button>
           </Link>
         </div>
-        <div className="flex items-center  mt-12 space-x-4">
+        <div className="mt-12 flex  items-center space-x-4">
           <Link
             href="https://www.linkedin.com/in/bienvenufaraja/"
             passHref
@@ -59,8 +59,8 @@ export default function ContactPage() {
           </Link>
         </div>
         <p className="mt-12 text-lg text-gray-500">
-          I'm currently open to freelance projects and contract work. If you
-          have any opportunities or would like to discuss a potential
+          I&apos;m currently open to freelance projects and contract work. If
+          you have any opportunities or would like to discuss a potential
           collaboration, please reach out to me. I look forward to hearing from
           you!
         </p>
