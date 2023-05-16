@@ -1,6 +1,8 @@
 import Link from "next/link"
+import { Terminal, Waves } from "lucide-react"
 import { FaInfoCircle } from "react-icons/fa"
 
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -28,17 +30,22 @@ export default function ProjectsPage() {
       <h1 className="text-center text-4xl font-extrabold sm:text-5xl md:text-6xl">
         Projects ({projects.length})
       </h1>
+      {projects.length === 0 && (
+        <div className="px-4 py-5 sm:p-6">
+          <p className="text-center text-lg font-medium text-gray-900 dark:text-white">
+            <FaInfoCircle className="mr-2 inline-block h-4 w-4" />
+            No projects yet
+          </p>
+          <Alert className="mx-auto mt-4 w-full md:w-1/2">
+            <Terminal className="h-4 w-4" />
+            <AlertTitle>Oops! No projects yet</AlertTitle>
+            <AlertDescription>
+              I am currently working on some projects. Check back later!
+            </AlertDescription>
+          </Alert>
+        </div>
+      )}
       <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.length === 0 && (
-          <div className="flex items-center justify-center">
-            <div className="flex flex-col items-center justify-center">
-              <FaInfoCircle className="mb-4 text-6xl text-gray-500" />
-              <p className="text-center text-xl text-gray-500">
-                Projects will be posted soon. Stay tuned!
-              </p>
-            </div>
-          </div>
-        )}
         {projects.length > 0 &&
           projects.map((project) => (
             <Card key={project.title}>
