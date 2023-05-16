@@ -20,11 +20,11 @@ export default function IndexPage() {
     <main className="container grid items-center">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-extrabold sm:text-5xl md:text-6xl">
-          Hi, I'm Bienvenu!
+          Hi, I&apos;m Bienvenu!
         </h1>
         <p className="mt-6 max-w-3xl text-xl text-gray-500">
-          I'm a full stack web developer with experience in both front-end and
-          back-end development. I specialize in developing web applications
+          I&apos;m a full stack web developer with experience in both front-end
+          and back-end development. I specialize in developing web applications
           using modern web technologies such as ReactJS, NodeJS, and NextJS.
         </p>
         <div className="mt-6 flex flex-row space-x-4">
