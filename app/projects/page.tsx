@@ -10,7 +10,7 @@ import {
   FaReact,
 } from "react-icons/fa"
 import { IoLogoJavascript } from "react-icons/io"
-import { SiTailwindcss } from "react-icons/si"
+import { SiRedux, SiTailwindcss } from "react-icons/si"
 
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Button } from "@/components/ui/button"
@@ -24,6 +24,23 @@ import {
 } from "@/components/ui/card"
 
 const projects: any[] = [
+  {
+    title: "in-house",
+    description:
+      "As a UI developer at in-house.com, I contributed to the development of user-facing features that resulted in a 25% increase in user satisfaction ratings, while prioritizing privacy and anonymity. I optimized existing features for better performance, accessibility, and usability, and developed custom UI components using ReactJS technologies to improve the overall functionality and aesthetic of the platform. Throughout my work, I remained committed to maintaining the highest standards of user privacy and data security.",
+    tech: (
+      <div className="mt-6 flex flex-row space-x-4">
+        <FaReact size={32} className="text-blue-500" />
+        <SiRedux size={32} />
+        <IoLogoJavascript size={32} className="text-yellow-500" />
+        <FaHtml5 size={32} className="text-orange-500" />
+        <SiTailwindcss size={32} className="text-blue-400" />
+      </div>
+    ),
+    image: "/in-house.png",
+    demoLink: "https://in-house.com/",
+    codeLink: "",
+  },
   {
     title: "ClassCritique",
     description:
