@@ -1,5 +1,6 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
+import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
@@ -51,14 +52,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
                   </div>
                   <div>
                     <span className="font-bold">Made with ❤️</span> by{" "}
-                    <a
-                      href="https://twitter.com/farajabien"
+                    <Link
+                      href={siteConfig.links.twitter}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="underline"
                     >
                       Faraja
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </footer>

@@ -12,7 +12,10 @@ export default function ContactPage() {
       <div className="mx-auto max-w-6xl items-center px-4 py-12 sm:px-6 lg:px-8">
         <div className="mt-4">
           <Link href="resume.pdf" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" className="flex items-center space-x-2 ">
+            <Button
+              variant="outline"
+              className="mb-2 flex items-center space-x-2"
+            >
               <span>View Resume</span>
               <FaFilePdf size={20} />
             </Button>
@@ -26,24 +29,22 @@ export default function ContactPage() {
           project or contract work, feel free to get in touch with me.
         </p>
 
-        <div className="mt-12">
+        <div className="mt-12 space-y-4">
           <Link
             href="mailto:faraja.bien@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button>
-              {" "}
+            <Button
+              className="
+            ml-2 md:ml-5"
+            >
               <Mail className="mr-2 h-4 w-4" /> faraja.bien@gmail.com
             </Button>
           </Link>
 
-          <Link
-            href="tel:+254793643308"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button variant="secondary" className="ml-4">
+          <Link href="tel:+254793643308">
+            <Button variant="secondary" className="ml-2 mt-2 md:ml-5">
               <FiPhone className="mr-2 h-4 w-4" />
               +254 793 643 308
             </Button>
