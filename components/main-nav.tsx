@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import Image from "next/image"
 import Link from "next/link"
 
 import { NavItem } from "@/types/nav"
@@ -61,7 +62,13 @@ export function MainNav({ items }: MainNavProps) {
         </Menubar>
 
         <Link href="/" className=" items-center space-x-2 md:flex">
-          <Icons.logo className="h-6 w-6" />
+          <Image
+            src={"/pacman/96.png"}
+            width={32}
+            height={32}
+            alt="Pacman"
+            className="rounded-full"
+          />
           <span className="font-bold sm:inline-block">{siteConfig.name}</span>
         </Link>
         {items?.map(
