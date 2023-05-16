@@ -1,14 +1,23 @@
 import Link from "next/link"
 import { Mail } from "lucide-react"
-import { FaGithub, FaLinkedin } from "react-icons/fa"
+import { FaFilePdf, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
 import { FiPhone } from "react-icons/fi"
 
+import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
 
 export default function ContactPage() {
   return (
     <main className="container grid items-center">
       <div className="mx-auto max-w-6xl items-center px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mt-4">
+          <Link href="resume.pdf" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" className="flex items-center space-x-2 ">
+              <span>View Resume</span>
+              <FaFilePdf size={20} />
+            </Button>
+          </Link>
+        </div>
         <h1 className="text-4xl font-extrabold sm:text-5xl md:text-6xl">
           Contact Me
         </h1>
@@ -40,24 +49,7 @@ export default function ContactPage() {
             </Button>
           </Link>
         </div>
-        <div className="mt-12 flex  items-center space-x-4">
-          <Link
-            href="https://www.linkedin.com/in/bienvenufaraja/"
-            passHref
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin size={32} />
-          </Link>
-          <Link
-            href="https://github.com/farajabien"
-            passHref
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub size={32} />
-          </Link>
-        </div>
+
         <p className="mt-12 text-lg text-gray-500">
           I&apos;m currently open to freelance projects and contract work. If
           you have any opportunities or would like to discuss a potential
