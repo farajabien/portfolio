@@ -1,15 +1,27 @@
 import Link from "next/link"
 import {
+  FaBrain,
+  FaCode,
+  FaCog,
   FaCss3Alt,
+  FaDollarSign,
+  FaFileCode,
   FaFilePdf,
   FaGit,
   FaGithub,
+  FaHandshake,
   FaHtml5,
+  FaMobileAlt,
   FaNodeJs,
+  FaPencilAlt,
   FaReact,
   FaRegFilePdf,
+  FaSearch,
+  FaServer,
+  FaShoppingCart,
 } from "react-icons/fa"
 import { IoLogoJavascript } from "react-icons/io"
+import { RiCustomerService2Fill } from "react-icons/ri"
 import { SiTailwindcss } from "react-icons/si"
 
 import { Button } from "@/components/ui/button"
@@ -40,7 +52,147 @@ export default function IndexPage() {
             className="text-gray-500  transition duration-300  hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-200"
           />
         </div>
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold">Services/Expertise</h2>
+          <div className="mt-6 grid grid-cols-1 gap-8 text-xs text-gray-500 dark:text-gray-300  sm:grid-cols-2 lg:grid-cols-3">
+            {/* Service 1 */}
+            <div className="flex items-center space-x-4">
+              <FaCode className="text-4xl text-blue-500" />
+              <span className="text-xl font-semibold">
+                Custom Website Development
+              </span>
+            </div>
+            {/* Service 2 */}
+            <div className="flex items-center space-x-4">
+              <FaShoppingCart className="text-4xl text-green-500" />
+              <span className="text-xl font-semibold">
+                E-commerce Solutions
+              </span>
+            </div>
+            {/* Service 3 */}
+            <div className="flex items-center space-x-4">
+              <FaMobileAlt className="text-4xl text-yellow-500" />
+              <span className="text-xl font-semibold">
+                Responsive Web Design
+              </span>
+            </div>
+            {/* Service 4 */}
+            <div className="flex items-center space-x-4">
+              <FaCog className="text-4xl text-orange-500" />
+              <span className="text-xl font-semibold">
+                Website Maintenance and Support
+              </span>
+            </div>
+            {/* Service 5 */}
+            <div className="flex items-center space-x-4">
+              <FaFileCode className="text-4xl text-purple-500" />
+              <span className="text-xl font-semibold">
+                Web Application Development
+              </span>
+            </div>
+            {/* Service 6 */}
+            <div className="flex items-center space-x-4">
+              <RiCustomerService2Fill className="text-4xl text-pink-500" />
+              <span className="text-xl font-semibold">UI/UX Design</span>
+            </div>
+          </div>
+        </div>
 
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold">Process/Approach</h2>
+          <div className="mt-6 grid grid-cols-1 gap-8 text-gray-500 dark:text-gray-300 sm:grid-cols-2">
+            <div className="flex items-center space-x-4">
+              <div className="rounded-full bg-blue-500 p-2">
+                <FaBrain className="animate-pulse text-3xl text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold">1. Consultation</h3>
+                <p className="text-sm">
+                  Initial discussion to understand your requirements and goals.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4">
+              <div className="rounded-full bg-green-500 p-2">
+                <FaPencilAlt className=" animate-pulse text-3xl text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold">
+                  2. Planning &amp; Design
+                </h3>
+                <p className="text-sm">
+                  Creating a project roadmap and designing user-friendly
+                  interfaces.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4">
+              <div className="animate-pulse rounded-full bg-yellow-500 p-2">
+                <FaCode className="text-3xl text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold">3. Development</h3>
+                <p className="text-sm">
+                  Implementing front-end and back-end functionality using modern
+                  web technologies.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4">
+              <div className="animate-pulse rounded-full bg-orange-500 p-2">
+                <FaSearch className="text-3xl text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold">4. Testing &amp; QA</h3>
+                <p className="text-sm">
+                  Thorough testing and debugging to ensure a seamless user
+                  experience.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4">
+              <div className="animate-pulse rounded-full bg-purple-500 p-2">
+                <FaServer className="text-3xl text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold">5. Deployment</h3>
+                <p className="text-sm">
+                  Deploying the website or web application to a production
+                  environment.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-4">
+              <div className="rounded-full bg-pink-500 p-2">
+                <FaHandshake className="text-3xl text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold">
+                  6. Maintenance &amp; Support
+                </h3>
+                <p className="text-sm">
+                  Providing ongoing maintenance and support services as needed.
+                </p>
+              </div>
+            </div>
+          </div>
+          <p className="mt-6 text-gray-500 dark:text-gray-200">
+            I believe in effective communication and collaboration. I&apos;m
+            available for regular feedback, iterative discussions, and to
+            address any concerns you may have throughout the development
+            process.
+          </p>
+        </div>
+
+        <div className="mt-12">
+          <div className="flex items-center space-x-2">
+            <FaDollarSign className="text-2xl text-yellow-500" />
+            <span className="text-xl font-semibold">
+              Pricing starts as low as $100 USD!
+            </span>
+          </div>
+        </div>
         <div className="mt-12">
           <Link href="/projects">
             <Button>View Portfolio</Button>
