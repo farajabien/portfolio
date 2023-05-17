@@ -165,7 +165,7 @@ export default function IndexPage() {
 
             <div className="flex items-center space-x-4">
               <div className="rounded-full bg-pink-500 p-2">
-                <FaHandshake className="text-3xl text-white" />
+                <FaHandshake className="animate-pulse text-3xl text-white" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold">
