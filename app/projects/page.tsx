@@ -26,6 +26,7 @@ import {
 const projects: any[] = [
   {
     title: "in-house",
+    type: "work",
     description:
       "As a UI developer at in-house.com, I contributed to the development of user-facing features that resulted in a 25% increase in user satisfaction ratings, while prioritizing privacy and anonymity. I optimized existing features for better performance, accessibility, and usability, and developed custom UI components using ReactJS technologies to improve the overall functionality and aesthetic of the platform. ",
     tech: (
@@ -164,7 +165,7 @@ export default function ProjectsPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Demo
+                    {project?.type === "work" ? "Live site" : " Demo"}
                   </Link>
                 </Button>
                 <Button variant="outline" disabled={project.codeLink === ""}>
