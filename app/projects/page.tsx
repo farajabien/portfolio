@@ -60,22 +60,7 @@ const projects: any[] = [
     demoLink: "https://class-critique-client-2.vercel.app/",
     codeLink: "https://github.com/farajabien/class-critique-client-2",
   },
-  {
-    title: "My Portfolio",
-    description:
-      "In the 'My Portfolio' project, I have developed and implemented a user-friendly portfolio website to showcase my work, skills, and achievements. The portfolio features a clean and modern design, highlighting my projects, experiences, and contact information.",
-    tech: (
-      <div className="mt-6 flex flex-row space-x-4">
-        <FaReact size={32} className="text-blue-500" />
-        <IoLogoJavascript size={32} className="text-yellow-500" />
-        <FaHtml5 size={32} className="text-orange-500" />
-        <SiTailwindcss size={32} className="text-blue-400" />
-      </div>
-    ),
-    image: "/portfolio.png",
-    demoLink: "https://farajabien.vercel.app/",
-    codeLink: "https://github.com/farajabien/portfolio",
-  },
+
   {
     title: "KingRafiki",
     description:
@@ -92,6 +77,22 @@ const projects: any[] = [
     // image: "",
     demoLink: "",
     codeLink: "https://github.com/farajabien/kingrafiki",
+  },
+  {
+    title: "My Portfolio",
+    description:
+      "In the 'My Portfolio' project, I have developed and implemented a user-friendly portfolio website to showcase my work, skills, and achievements. The portfolio features a clean and modern design, highlighting my projects, experiences, and contact information.",
+    tech: (
+      <div className="mt-6 flex flex-row space-x-4">
+        <FaReact size={32} className="text-blue-500" />
+        <IoLogoJavascript size={32} className="text-yellow-500" />
+        <FaHtml5 size={32} className="text-orange-500" />
+        <SiTailwindcss size={32} className="text-blue-400" />
+      </div>
+    ),
+    image: "/portfolio.png",
+    demoLink: "https://farajabien.vercel.app/",
+    codeLink: "https://github.com/farajabien/portfolio",
   },
   {
     title: "Diego's Blog",
