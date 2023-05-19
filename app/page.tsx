@@ -188,13 +188,13 @@ export default function IndexPage() {
 
         <div className="mt-12">
           <div className="flex items-center space-x-2">
-            <div className="mt-12 rounded-lg bg-yellow-200 dark:bg-yellow-600 px-6 py-4">
+            <div className="mt-12 rounded-lg bg-yellow-300 dark:bg-yellow-700 px-6 py-4">
               <div className="flex items-center">
-                <FaDollarSign className="text-2xl text-yellow-500 dark:text-white" />
+                <FaDollarSign className="text-2xl text-yellow-500 dark:text-yellow-200" />
                 <span className="ml-2 text-xl font-semibold">
                   Pricing starts as low as $100 USD!
                 </span>
-                <span className="ml-2 text-xl font-semibold">
+                <span className="ml-4 text-xl font-semibold">
                   Bring a client and get a{" "}
                   <FaPercent className="inline-block" />
                   10 commission!
@@ -203,6 +203,7 @@ export default function IndexPage() {
             </div>
           </div>
         </div>
+
         <div className="mt-12">
           <Link href="/projects">
             <Button>View Portfolio</Button>
