@@ -18,5 +18,7 @@ export const siteConfig = {
     twitter: "https://twitter.com/farajabien",
     github: "https://github.com/farajabien",
     linkedIn: "https://www.linkedin.com/in/bienvenufaraja",
+    buyCoffee: 
+      "https://bmc.link/farajabien",
   },
 }

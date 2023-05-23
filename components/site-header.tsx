@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { FaCoffee, FaDollarSign } from "react-icons/fa"
 
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
@@ -13,6 +14,15 @@ export function SiteHeader() {
         <MainNav items={siteConfig.mainNav} />
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-1">
+            <Link
+              href={siteConfig.links.buyCoffee}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="max-w-1 rounded-full bg-primary p-2 text-xs font-medium text-white hover:bg-gray-700 dark:text-black dark:hover:text-gray-400"
+            >
+              <FaDollarSign className="mr-1 inline" />
+              Buy Me Coffee <FaCoffee size={16} className="ml-1 inline" />
+            </Link>
             <Link
               href={siteConfig.links.github}
               target="_blank"

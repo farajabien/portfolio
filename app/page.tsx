@@ -2,6 +2,7 @@ import Link from "next/link"
 import {
   FaBrain,
   FaCode,
+  FaCoffee,
   FaCog,
   FaCss3Alt,
   FaDollarSign,
@@ -28,6 +29,7 @@ import { SiTailwindcss } from "react-icons/si"
 import { Button } from "@/components/ui/button"
 
 import "react-circular-progressbar/dist/styles.css"
+import { siteConfig } from "@/config/site"
 
 export default function IndexPage() {
   return (
@@ -185,54 +187,33 @@ export default function IndexPage() {
             process.
           </p>
         </div>
+      </div>
 
-        <div className="mt-12">
-          <div className="flex items-center space-x-2">
-            <div className="mt-12 rounded-lg bg-yellow-300 dark:bg-yellow-700 px-6 py-4">
-              <div className="flex items-center">
-                <FaDollarSign className="text-2xl text-yellow-500 dark:text-yellow-200" />
-                <span className="ml-2 text-xl font-semibold">
-                  Pricing starts as low as $100 USD!
-                </span>
-                <span className="ml-4 text-xl font-semibold">
-                  Bring a client and get a{" "}
-                  <FaPercent className="inline-block" />
-                  10 commission!
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="mt-12">
+        <Link href="/projects">
+          <Button>View Portfolio</Button>
+        </Link>
 
-        <div className="mt-12">
-          <Link href="/projects">
-            <Button>View Portfolio</Button>
-          </Link>
+        <Link href="/contact">
+          <Button variant="secondary" className="ml-4">
+            Contact Me
+          </Button>
+        </Link>
+      </div>
 
-          <Link href="/contact">
-            <Button variant="secondary" className="ml-4">
-              Contact Me
+      <div className="mt-12">
+        <h2 className="text-2xl font-bold">Resume</h2>
+        <p className="mt-4 text-gray-500 dark:text-gray-200">
+          Want to know more about my skills, experience, and qualifications?
+          Check out my resume!
+        </p>
+        <div className="mt-4">
+          <Link href="resume.pdf" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" className="flex items-center space-x-2 ">
+              <span>View Resume</span>
+              <FaFilePdf size={20} />
             </Button>
           </Link>
-        </div>
-
-        <div className="mt-12">
-          <h2 className="text-2xl font-bold">Resume</h2>
-          <p className="mt-4 text-gray-500 dark:text-gray-200">
-            Want to know more about my skills, experience, and qualifications?
-            Check out my resume!
-          </p>
-          <div className="mt-4">
-            <Link href="resume.pdf" target="_blank" rel="noopener noreferrer">
-              <Button
-                variant="outline"
-                className="flex items-center space-x-2 "
-              >
-                <span>View Resume</span>
-                <FaFilePdf size={20} />
-              </Button>
-            </Link>
-          </div>
         </div>
       </div>
     </main>
