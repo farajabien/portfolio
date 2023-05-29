@@ -65,7 +65,7 @@ const projects:
         <SiTailwindcss size={32} className="text-blue-400" />
       </div>
     ),
-    image: "/classcritique.png",
+    image: "/classcritique3.png",
     demoLink: "https://class-critique-3.vercel.app/",
     codeLink: "",
   },
