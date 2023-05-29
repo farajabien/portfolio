@@ -66,8 +66,8 @@ const projects:
       </div>
     ),
     image: "/classcritique.png",
-    demoLink: "https://class-critique-client-2.vercel.app/",
-    codeLink: "https://github.com/farajabien/class-critique-client-2",
+    demoLink: "https://class-critique-3.vercel.app/",
+    codeLink: "",
   },
 
   {
