@@ -23,7 +23,16 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-const projects: any[] = [
+const projects:
+  | {
+      title: string
+      type?: string
+      description: string
+      tech: JSX.Element
+      image?: string
+      demoLink: string
+      codeLink: string
+    }[] = [
   {
     title: "in-house",
     type: "work",
@@ -135,8 +144,8 @@ export default function ProjectsPage() {
       )}
       <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {projects.length > 0 &&
-          projects.map((project) => (
-            <Card key={project.title}>
+          projects.map((project, index) => (
+            <Card key={index}>
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
                 {project.image ? (

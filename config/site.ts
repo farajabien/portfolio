@@ -13,6 +13,10 @@ export const siteConfig = {
       title: "Contact",
       href: "contact",
     },
+    {
+      title: "Blogs",
+      href: "blogs",
+    }
   ],
   links: {
     twitter: "https://twitter.com/farajabien",
