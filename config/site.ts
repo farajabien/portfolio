@@ -15,7 +15,7 @@ export const siteConfig = {
     },
     {
       title: "Blogs",
-      href: "blogs",
+      href: "https://farajabien.hashnode.dev/",
     }
   ],
   links: {
