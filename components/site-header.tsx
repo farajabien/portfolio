@@ -14,7 +14,7 @@ export function SiteHeader() {
         <MainNav items={siteConfig.mainNav} />
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-1">
-            <Link
+            {/* <Link
               href={siteConfig.links.buyCoffee}
               target="_blank"
               rel="noopener noreferrer"
@@ -22,7 +22,7 @@ export function SiteHeader() {
             >
               <FaDollarSign className="mr-1 inline" />
               Buy Me Coffee <FaCoffee size={16} className="ml-1 inline" />
-            </Link>
+            </Link> */}
             <Link
               href={siteConfig.links.github}
               target="_blank"
